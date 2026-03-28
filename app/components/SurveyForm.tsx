@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { saveLead } from "@/app/actions/saveLead";
 
 type FormData = {
   nome: string;
@@ -188,10 +189,15 @@ export default function SurveyForm() {
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((r) => setTimeout(r, 1800));
+    const result = await saveLead(formData);
     setIsSubmitting(false);
-    setSubmitted(true);
+
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      setErrors({ email: result.error });
+      setCurrentStep(1);
+    }
   };
 
   if (submitted) {
