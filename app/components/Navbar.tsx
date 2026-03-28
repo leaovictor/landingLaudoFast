@@ -41,22 +41,8 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#"
-          style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none" }}
+          style={{ display: "flex", alignItems: "center", textDecoration: "none" }}
         >
-          <div
-            style={{
-              width: "32px",
-              height: "32px",
-              borderRadius: "8px",
-              background: "linear-gradient(135deg, #2563eb, #06b6d4)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "1rem",
-            }}
-          >
-            ⚡
-          </div>
           <span
             style={{
               fontSize: "1.125rem",
