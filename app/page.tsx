@@ -11,15 +11,9 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      {/* Urgency bar */}
-      <div className="urgency-bar">
-        🔥 <strong>Acesso antecipado limitado.</strong> Apenas 200 vagas
-        disponíveis. Reserve a sua agora.
-      </div>
-
       <Navbar />
 
-      <main style={{ paddingTop: "40px" }}>
+      <main style={{ paddingTop: "0" }}>
         <HeroSection />
         <ProblemSection />
         <SolutionSection />

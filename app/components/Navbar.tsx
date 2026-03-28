@@ -20,6 +20,14 @@ export default function Navbar() {
         boxShadow: scrolled ? "0 1px 20px rgba(0,0,0,0.06)" : "none",
       }}
     >
+      {/* Urgency bar inside fixed nav to prevent overlap */}
+      {!scrolled && (
+        <div className="urgency-bar">
+          🔥 <strong>Acesso antecipado limitado.</strong> Apenas 200 vagas
+          disponíveis. Reserve a sua agora.
+        </div>
+      )}
+
       <div
         className="container"
         style={{

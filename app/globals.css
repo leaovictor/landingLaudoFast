@@ -621,16 +621,13 @@ body {
    ========================================= */
 
 .urgency-bar {
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  color: white;
+  background: #fffbeb; /* Light yellow background as seen in screenshot */
+  color: #92400e; /* Darker amber text for contrast */
   text-align: center;
   padding: 0.625rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.urgency-bar strong {
-  font-weight: 700;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-bottom: 1px solid #fef3c7;
 }
 
 /* =========================================
@@ -638,7 +635,7 @@ body {
    ========================================= */
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
