@@ -7,32 +7,22 @@ type FormData = {
   nome: string;
   email: string;
   profissao: string;
-  fazLaudos: string;
-  laudosMes: string;
-  tempoPorLaudo: string;
   maiorDificuldade: string;
-  usaSoftware: string;
   pagariaPorAutomacao: string;
-  quantoPagaria: string;
 };
 
 const initialData: FormData = {
   nome: "",
   email: "",
   profissao: "",
-  fazLaudos: "",
-  laudosMes: "",
-  tempoPorLaudo: "",
   maiorDificuldade: "",
-  usaSoftware: "",
   pagariaPorAutomacao: "",
-  quantoPagaria: "",
 };
 
 type Step = {
   key: keyof FormData;
   question: string;
-  type: "text" | "email" | "options" | "textarea" | "number";
+  type: "text" | "email" | "options" | "textarea";
   placeholder?: string;
   options?: string[];
   required?: boolean;
@@ -68,44 +58,10 @@ const steps: Step[] = [
     required: true,
   },
   {
-    key: "fazLaudos",
-    question: "Você faz laudos técnicos atualmente?",
-    type: "options",
-    options: ["Sim", "Não", "Às vezes"],
-    required: true,
-  },
-  {
-    key: "laudosMes",
-    question: "Quantos laudos você faz por mês?",
-    type: "options",
-    options: ["1 a 5", "6 a 15", "16 a 30", "Mais de 30"],
-    required: false,
-  },
-  {
-    key: "tempoPorLaudo",
-    question: "Quanto tempo você leva por laudo (em média)?",
-    type: "options",
-    options: [
-      "Menos de 1 hora",
-      "1 a 2 horas",
-      "2 a 4 horas",
-      "Mais de 4 horas",
-    ],
-    required: false,
-  },
-  {
     key: "maiorDificuldade",
     question: "Qual é sua maior dificuldade hoje com laudos?",
     type: "textarea",
-    placeholder:
-      "Ex: demora muito, não tem padrão, muito retrabalho...",
-    required: false,
-  },
-  {
-    key: "usaSoftware",
-    question: "Você usa algum software hoje para laudos? Qual?",
-    type: "text",
-    placeholder: 'Ex: Word, Excel, AutoCAD, ou "Nenhum"',
+    placeholder: "Ex: demora muito, não tem padrão, muito retrabalho...",
     required: false,
   },
   {
@@ -114,18 +70,6 @@ const steps: Step[] = [
     type: "options",
     options: ["Sim, definitivamente!", "Talvez, depende do valor", "Não pagaria"],
     required: true,
-  },
-  {
-    key: "quantoPagaria",
-    question: "Quanto você pagaria por mês por essa solução?",
-    type: "options",
-    options: [
-      "Até R$ 49/mês",
-      "R$ 50 a R$ 99/mês",
-      "R$ 100 a R$ 199/mês",
-      "Mais de R$ 200/mês",
-    ],
-    required: false,
   },
 ];
 
@@ -150,7 +94,7 @@ export default function SurveyForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const step = steps[currentStep];
-  const progress = Math.round(((currentStep) / steps.length) * 100);
+  const progress = Math.round(((currentStep + 1) / steps.length) * 100);
 
   const handleChange = (value: string) => {
     setFormData((prev) => ({ ...prev, [step.key]: value }));

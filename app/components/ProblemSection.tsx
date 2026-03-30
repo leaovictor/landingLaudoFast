@@ -137,9 +137,9 @@ export default function ProblemSection() {
                 lineHeight: "1.5",
               }}
             >
-              "O profissional brasileiro perde em média{" "}
+              &ldquo;O profissional brasileiro perde em média{" "}
               <span style={{ color: "var(--primary)" }}>8 horas por semana</span>{" "}
-              escrevendo laudos manualmente."
+              escrevendo laudos manualmente.&rdquo;
             </p>
             <p
               style={{

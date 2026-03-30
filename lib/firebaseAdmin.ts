@@ -23,8 +23,6 @@ if (!getApps().length) {
     if (!privateKey.includes("-----END PRIVATE KEY-----")) {
       privateKey = `${privateKey}\n-----END PRIVATE KEY-----\n`;
     }
-    
-    console.log("Firebase Private Key successfully processed. Length:", privateKey.length);
   }
 
   if (!projectId || !clientEmail || !privateKey) {

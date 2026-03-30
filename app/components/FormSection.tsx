@@ -40,7 +40,7 @@ export default function FormSection() {
                   marginBottom: "2rem",
                 }}
               >
-                Responda 10 perguntas rápidas (menos de 2 minutos) e entre na{" "}
+                Responda 5 perguntas rápidas (menos de 1 minuto) e entre na{" "}
                 <strong style={{ color: "var(--text-primary)" }}>
                   lista de espera exclusiva
                 </strong>
@@ -66,7 +66,7 @@ export default function FormSection() {
                     text: "Desconto exclusivo para early adopters",
                   },
                   { icon: "🤝", text: "Participe da beta fechada" },
-                  { icon: "⏱️", text: "Leva menos de 2 minutos" },
+                  { icon: "⏱️", text: "Leva menos de 1 minuto" },
                 ].map((b) => (
                   <div
                     key={b.text}

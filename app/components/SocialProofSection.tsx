@@ -10,7 +10,6 @@ const testimonials = [
     avatarColor: "#2563eb",
     quote:
       "Faço laudos de instalações elétricas há 12 anos. É um trabalho que consome meu dia todo. Uma ferramenta assim faria uma diferença enorme.",
-    stars: 5,
   },
   {
     name: "Ana Ferreira",
@@ -19,7 +18,6 @@ const testimonials = [
     avatarColor: "#10b981",
     quote:
       "A padronização é minha maior dificuldade. Cada colega faz diferente. Adoraria uma solução que mantivesse tudo no mesmo padrão.",
-    stars: 5,
   },
   {
     name: "Roberto Alves",
@@ -28,7 +26,6 @@ const testimonials = [
     avatarColor: "#8b5cf6",
     quote:
       "Retrabalho é meu pesadelo. Às vezes refaço o mesmo laudo 3 vezes por mudanças mínimas. Automatizar isso seria um sonho.",
-    stars: 5,
   },
 ];
 
@@ -60,11 +57,11 @@ export default function SocialProofSection() {
 
         <ScrollReveal>
           <div className="section-label">
-            <span className="eyebrow">💬 O que os profissionais dizem</span>
+            <span className="eyebrow">💬 Profissionais reais, dores reais</span>
             <h2 className="heading-lg">A dor é real. A solução também.</h2>
             <p>
-              Depoimentos de profissionais que participaram da nossa pesquisa
-              sobre necessidades do mercado.
+              O que profissionais de engenharia brasileiros disseram sobre os
+              desafios de criar laudos manualmente.
             </p>
           </div>
         </ScrollReveal>
@@ -73,11 +70,6 @@ export default function SocialProofSection() {
           {testimonials.map((t, i) => (
             <ScrollReveal key={t.name} delay={i * 120}>
               <div className="testimonial-card" style={{ height: "100%" }}>
-                {/* Stars */}
-                <div style={{ marginBottom: "1rem", fontSize: "1rem" }}>
-                  {"⭐".repeat(t.stars)}
-                </div>
-
                 {/* Quote */}
                 <p
                   style={{
@@ -88,7 +80,7 @@ export default function SocialProofSection() {
                     marginBottom: "1.25rem",
                   }}
                 >
-                  "{t.quote}"
+                  &ldquo;{t.quote}&rdquo;
                 </p>
 
                 {/* Author */}

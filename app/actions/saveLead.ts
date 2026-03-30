@@ -6,13 +6,8 @@ export type LeadData = {
   nome: string;
   email: string;
   profissao: string;
-  fazLaudos: string;
-  laudosMes: string;
-  tempoPorLaudo: string;
   maiorDificuldade: string;
-  usaSoftware: string;
   pagariaPorAutomacao: string;
-  quantoPagaria: string;
 };
 
 export type SaveLeadResult =
@@ -30,8 +25,21 @@ export async function saveLead(data: LeadData): Promise<SaveLeadResult> {
   }
 
   try {
+    const normalizedEmail = data.email.trim().toLowerCase();
+
+    const existing = await db
+      .collection("leads")
+      .where("email", "==", normalizedEmail)
+      .limit(1)
+      .get();
+
+    if (!existing.empty) {
+      return { success: false, error: "Este e-mail já está na lista de espera." };
+    }
+
     const docRef = await db.collection("leads").add({
       ...data,
+      email: normalizedEmail,
       createdAt: new Date().toISOString(),
     });
 

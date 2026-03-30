@@ -95,8 +95,22 @@ export default function HeroSection() {
             display: "inline-block",
             width: "100%",
             maxWidth: "680px",
+            position: "relative",
           }}
         >
+          {/* Video demo placeholder */}
+          <div
+            style={{
+              position: "absolute",
+              top: "-12px",
+              left: "-12px",
+              right: "-12px",
+              bottom: "-12px",
+              borderRadius: "24px",
+              background: "linear-gradient(135deg, rgba(37,99,235,0.06), rgba(6,182,212,0.06))",
+              zIndex: 0,
+            }}
+          />
           <div
             style={{
               background: "white",
@@ -210,9 +224,9 @@ export default function HeroSection() {
                   margin: 0,
                 }}
               >
-                "Identificada degradação do isolamento na fase B com 89% de
+                &ldquo;Identificada degradação do isolamento na fase B com 89% de
                 confiança. Recomenda-se substituição imediata e inspeção das
-                demais fases."
+                demais fases.&rdquo;
               </p>
             </div>
 

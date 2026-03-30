@@ -84,6 +84,18 @@ export default function Footer() {
             Como Funciona
           </a>
           <a
+            href="#faq"
+            style={{ color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.color = "rgba(255,255,255,0.9)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = "rgba(255,255,255,0.5)")
+            }
+          >
+            FAQ
+          </a>
+          <a
             href="#pesquisa"
             style={{ color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
             onMouseEnter={(e) =>
@@ -94,6 +106,18 @@ export default function Footer() {
             }
           >
             Entrar na Lista
+          </a>
+          <a
+            href="/politica-de-privacidade"
+            style={{ color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.color = "rgba(255,255,255,0.9)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = "rgba(255,255,255,0.5)")
+            }
+          >
+            Privacidade
           </a>
         </div>
 

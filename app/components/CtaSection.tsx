@@ -143,7 +143,7 @@ export default function CtaSection() {
           >
             <span>✅ Sem cartão de crédito</span>
             <span>✅ Gratuito por 30 dias</span>
-            <span>✅ Cancele quando quiser</span>
+            <span>✅ Sem compromisso</span>
           </div>
         </ScrollReveal>
       </div>
